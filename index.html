@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addmission form</title>
+</head>
+<body style="background-color:blueviolet;">
+    <h1>Student Addmission form</h1>
+    <form action="/action.php">
+
+    <label for="fullname">Fullname</label>
+    <input type="text" id="fullname" value="fullname"><br><br>
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" value="email"><br><br>
+
+    <label for="DOB">DOB</label>
+    <input type="date" id="DOB" value="DOB"><br><br>
+
+<details>
+    <summary>Gender</summary> 
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">female</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">other</label><br><br>
+    </label>
+    </details>
+
+    <label for="Address">Address</label>
+    <textarea id="address" name="address" rows="5" cols="50">address</textarea><br><br>
+
+    <label for="phone">phone</label>
+    <input type="tel" name="phone" id="phone" required><br><br>
+
+    <input type="submit" value="submit">
+    <marquee> for more info contact 98789</marquee>
+    </form>
+    <a href="https://www.google.co.in/">Google</a>
+    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
